@@ -38,6 +38,10 @@
 
         }
 
+        &--mobile--menu {
+            display: none;
+        }
+
         &--link {
             @include headerRightPart;
 
@@ -105,3 +109,5 @@
     }
 
 }
+
+@import "../adaptive/header-adaptive";

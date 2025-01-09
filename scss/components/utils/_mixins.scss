@@ -17,7 +17,7 @@
 }
 
 @mixin headerRightPart {
-  @extend headerLink;
+  @include headerLink;
   color: $lightGrey;
 }
 
@@ -71,4 +71,16 @@
   line-height: 18.75px;
   letter-spacing: 0.03em;
   color: $lightGrey;
+}
+
+
+@mixin footerSmallTitle {
+  margin-bottom: 20px;
+    font-family: $siteFont;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.41px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $white;
 }

@@ -9,8 +9,7 @@
     width: 100%;
     max-width: 1170px;
     margin: 0 auto;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 60px 20px;
 
     img {
         margin-bottom: 20px;
@@ -153,3 +152,4 @@ footer {
         border: 0;
     }
 }
+@import "../adaptive/footer-adaptive"

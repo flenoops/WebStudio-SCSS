@@ -3,18 +3,16 @@
     padding-bottom: 25px;
 
     &_container {
-        width: 100%;
+        @include containerProperties;
         display: flex;
         justify-content: space-between;
-        max-width: 1170px;
-        margin: 0 auto;
     }
 
     &_right {
         &--side {
             display: flex;
             gap: 30px;
-    
+
             &--part {
                 display: flex;
                 gap: 10px;
@@ -33,35 +31,32 @@
                     }
 
                     a {
-                        color: #2196f3; 
+                        color: #2196f3;
                     }
                 }
             }
 
         }
 
+        &--mobile--menu {
+            display: none;
+        }
+
         &--link {
-            font-family: Roboto;
-                font-size: 14px;
-                font-weight: 500;
-                line-height: 16.41px;
-                letter-spacing: 0.02em;
-                text-align: left;
-                color: #757575;
+            @include headerRightPart;
+
+            &:hover {
                 transition: .5s;
+                color: #2196f3;
+            }
 
-                &:hover {
-                    transition: .5s;
-                    color: #2196f3;
-                }
-
-                &:first-child {
-                    margin-right: 50px;
-                }
+            &:first-child {
+                margin-right: 50px;
+            }
         }
     }
 
-   
+
 
     &_left {
         &--side {
@@ -78,13 +73,7 @@
         align-items: center;
 
         &--items {
-            transition: 0.5s;
-            font-family: Roboto;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 16.41px;
-            letter-spacing: 0.02em;
-            color: #212121;
+            @include headerLink;
 
             &:not(:last-child) {
                 margin-right: 50px;
@@ -105,7 +94,7 @@
                     position: absolute;
                 }
 
-            
+
             }
 
             a {
@@ -120,3 +109,4 @@
     }
 
 }
+@import "../adaptive/header-adaptive"

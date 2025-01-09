@@ -45,12 +45,11 @@
     &_second {
         &--section {
             padding-bottom: 94px;
-        }
-
-        &--line {
             display: flex;
-            justify-content: space-between;
-
+            max-width: 1170px;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
             &:not(:last-child) {
                 margin-bottom: 30px;
             }
@@ -90,7 +89,7 @@
                     padding-left: 24px;
                 }
 
-                &:hover &_hover {
+                &:hover .card_hover {
                     transform: translateY(0);
                     top: 0;
                     height: 75%;
@@ -98,7 +97,7 @@
 
                 &_hover {
                     position: absolute;
-                    bottom: 0;
+                    bottom: 0; 
                     right: 0;
                     left: 0;
                     background-color: #2196F3E5;
@@ -128,3 +127,4 @@
         }
     }
 }
+@import "../adaptive/main-adaptive"

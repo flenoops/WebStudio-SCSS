@@ -9,8 +9,7 @@
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 20px;
 
   img {
     margin-bottom: 20px;
@@ -75,29 +74,11 @@ footer {
   }
 
   .footer_second--title {
-    margin-bottom: 20px;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16.41px;
-    letter-spacing: 0.03em;
-    text-align: left;
-    text-transform: uppercase;
-    color: #ffffff;
+    @include footerSmallTitle;
   }
 
   .footer_third--title {
-    margin-bottom: 20px;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 16.41px;
-    letter-spacing: 0.03em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #ffffff;
-    text-transform: uppercase;
+    @include footerSmallTitle;
   }
 }
 
@@ -152,3 +133,5 @@ footer {
     border: 0;
   }
 }
+
+@import "../adaptive/footer-adaptive"

@@ -25,10 +25,11 @@ body {
 }
 .header_container {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
   max-width: 1170px;
   margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
 }
 .header_right--side {
   display: flex;
@@ -52,15 +53,19 @@ body {
 .header_right--side--part:hover a {
   color: #2196f3;
 }
+.header_right--mobile--menu {
+  display: none;
+}
 .header_right--link {
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 16.41px;
   letter-spacing: 0.02em;
   text-align: left;
-  color: #757575;
+  color: #212121;
   transition: 0.5s;
+  color: #757575;
 }
 .header_right--link:hover {
   transition: 0.5s;
@@ -80,13 +85,14 @@ body {
   align-items: center;
 }
 .header_navigation--items {
-  transition: 0.5s;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 16.41px;
   letter-spacing: 0.02em;
+  text-align: left;
   color: #212121;
+  transition: 0.5s;
 }
 .header_navigation--items:not(:last-child) {
   margin-right: 50px;
@@ -113,6 +119,30 @@ body {
   color: #2196f3;
 }
 
+@media screen and (max-width: 915px) {
+  .header_right--side {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header_container {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 750px) {
+  .header_left--side {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header_navigation, .header_right--side--part {
+    display: none;
+  }
+  .header_right--mobile--menu {
+    display: block;
+    cursor: pointer;
+  }
+}
 .main {
   margin-top: 119px;
 }
@@ -154,23 +184,24 @@ body {
 }
 .main_second--section {
   padding-bottom: 94px;
-}
-.main_second--line {
   display: flex;
-  justify-content: space-between;
+  max-width: 1170px;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
-.main_second--line:not(:last-child) {
+.main_second--section:not(:last-child) {
   margin-bottom: 30px;
 }
-.main_second--line .card {
+.main_second--section .card {
   height: 404px;
   overflow: hidden;
   position: relative;
 }
-.main_second--line .card img {
+.main_second--section .card img {
   margin-bottom: 20px;
 }
-.main_second--line .card_title {
+.main_second--section .card_title {
   font-family: Roboto;
   font-size: 18px;
   font-weight: 700;
@@ -179,7 +210,7 @@ body {
   text-align: left;
   color: #212121;
 }
-.main_second--line .card_text {
+.main_second--section .card_text {
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
@@ -189,15 +220,15 @@ body {
   padding-bottom: 20px;
   color: #757575;
 }
-.main_second--line .card_text, .main_second--line .card_title {
+.main_second--section .card_text, .main_second--section .card_title {
   padding-left: 24px;
 }
-.main_second--line .card:hover .main_second--line .card_hover {
+.main_second--section .card:hover .card_hover {
   transform: translateY(0);
   top: 0;
   height: 75%;
 }
-.main_second--line .card_hover {
+.main_second--section .card_hover {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -206,7 +237,7 @@ body {
   transform: translateY(100%);
   transition: transform 0.5s ease;
 }
-.main_second--line .card_hover--text {
+.main_second--section .card_hover--text {
   font-family: Roboto;
   max-width: 340px;
   font-size: 18px;
@@ -220,11 +251,33 @@ body {
   color: white;
   padding: 63px 0px 63px 24px;
 }
-.main_second--line .card:hover {
+.main_second--section .card:hover {
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.1607843137), 0px 4px 4px 0px rgba(0, 0, 0, 0.0588235294), 0px 1px 1px 0px rgba(0, 0, 0, 0.1215686275);
   transition: 0.5s;
 }
 
+@media screen and (max-width: 640px) {
+  .main_navigation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+    margin-bottom: 40px;
+  }
+  .main_navigation .main_link {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main_second--section .card img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 385px) {
+  .main_navigation {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .footer_section {
   background-color: #2f303a;
   margin-top: 94px;
@@ -236,8 +289,7 @@ body {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 20px;
 }
 .footer_container img {
   margin-bottom: 20px;
@@ -369,4 +421,25 @@ footer .footer_third--title {
   align-items: center;
   gap: 16px;
   border: 0;
+}
+
+@media screen and (max-width: 1011px) {
+  .footer_right {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 835px) {
+  .footer_third--email--wrapper {
+    flex-direction: column;
+  }
+  .footer_third--email--wrapper input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 460px) {
+  .footer_container {
+    flex-direction: column;
+    gap: 35px;
+  }
 }/*# sourceMappingURL=portfolio.css.map */
