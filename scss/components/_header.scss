@@ -40,6 +40,32 @@
 
         &--mobile--menu {
             display: none;
+
+            &--list--wrapper {
+                position: fixed;
+                right: 0;
+                top: 0;
+                width: 250px;
+                height: 100vh;
+                background-color: #2196F3E6;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: translateX(100%);
+                transition: transform 1s ease-in-out;
+            }
+
+            &--list {
+                display: flex;
+                flex-direction: column;
+                padding: 15px;
+                gap: 20px;
+                color: beige;
+                font-size: 20px;
+                a {
+                    color: beige;
+                }
+            }
         }
 
         &--link {

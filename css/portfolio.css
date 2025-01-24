@@ -56,6 +56,31 @@ body {
 .header_right--mobile--menu {
   display: none;
 }
+.header_right--mobile--menu--list--wrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: rgba(33, 150, 243, 0.9019607843);
+  display: flex;
+  z-index: 99;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out;
+}
+.header_right--mobile--menu--list {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 20px;
+  color: beige;
+  font-size: 20px;
+}
+.header_right--mobile--menu--list a {
+  color: beige;
+}
 .header_right--link {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -97,13 +122,13 @@ body {
 .header_navigation--items:not(:last-child) {
   margin-right: 50px;
 }
-.header_navigation--items:first-child {
+.header_navigation--items:nth-child(2) {
   position: relative;
   color: #2196F3;
 }
-.header_navigation--items:first-child::after {
+.header_navigation--items:nth-child(2)::after {
   content: "";
-  width: 48px;
+  width: 72px;
   height: 4px;
   border-radius: 2px;
   background-color: #2196F3;
@@ -442,4 +467,7 @@ footer .footer_third--title {
     flex-direction: column;
     gap: 35px;
   }
+}
+html {
+  scroll-behavior: smooth;
 }/*# sourceMappingURL=portfolio.css.map */

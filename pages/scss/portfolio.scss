@@ -5,3 +5,7 @@
 @import './components/header-portfolio';
 @import './components/main-portfolio';
 @import './components/footer-portfolio';
+
+html {
+    scroll-behavior: smooth;
+}
